@@ -1,0 +1,11 @@
+[user]
+        name = Shane Kennedy
+        email = shane.kennedy19@gmail.com
+[alias]
+        co = checkout
+        st = status
+        lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+        lg2 = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit --date=short
+        search = log -p --all -S
+[github]
+	user = shane.kennedy19@gmail.com
