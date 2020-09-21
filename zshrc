@@ -40,6 +40,9 @@ export PATH=$PATH:$GOPATH/bin
 export STACKPATH=$HOME/.local
 export PATH=$PATH:$STACKPATH/bin
 
+# Vim 
+alias vim="nvim"
+
 # Misc
 export LESS="-SRXF"
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES

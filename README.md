@@ -1,7 +1,7 @@
 # My dotfiles
 
 ## Overview
-Includes my dotfiles for zsh, git and vim
+Includes my dotfiles for zsh, git and neovim
 
 ## Setup
 ``` bash

@@ -3,11 +3,11 @@
 DOTTIES=$(pwd)
 
 # Vim
-VIMDIR="$HOME/.vim"
+VIMDIR="$HOME/.config/nvim/"
 if [ ! -d "$VIMDIR" ]; then
     mkdir "$VIMDIR"
 fi
-ln -s "$DOTTIES/vimrc" "$VIMDIR/vimrc"
+ln -s "$DOTTIES/nvimrc" "$VIMDIR/init.vim"
 
 # Git
 ln -s "$DOTTIES/gitconfig" "$HOME/.gitconfig"
