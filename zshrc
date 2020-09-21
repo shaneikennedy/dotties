@@ -1,11 +1,21 @@
 # Zsh
-export ZSH="~/.oh-my-zsh"
+export ZSH="/Users/shanekennedy/dotties/oh-my-zsh"
 ZSH_THEME="refined"
 DEFAULT_USER="shanekennedy"
+source "$ZSH/oh-my-zsh.sh"
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 plugins=(
-    git zsh-syntax-highlighting
+    git
+    zsh-syntax-highlighting
+    zsh-autosuggestions
+    python
+    fzf
+    yarn
+    pyenv
+    github
+    emacs
 )
-source $ZSH/oh-my-zsh.sh
 
 # Airflow
 alias af="airflow"
