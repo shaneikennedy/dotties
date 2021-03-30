@@ -3,7 +3,7 @@
 DOTTIES=$(pwd)
 
 # Vim
-VIMDIR="$HOME/.config/nvim/"
+VIMDIR="$HOME/.config/nvim"
 if [ ! -d "$VIMDIR" ]; then
     mkdir "$VIMDIR"
 fi
