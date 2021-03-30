@@ -9,3 +9,11 @@
         search = log -p --all -S
 [github]
 	user = shane.kennedy19@gmail.com
+[core]
+	pager = delta
+[delta]
+    plus-style = "syntax #012800"
+    minus-style = "syntax #340001"
+    syntax-theme = Monokai Extended
+[interactive]
+    diffFilter = delta --color-only
