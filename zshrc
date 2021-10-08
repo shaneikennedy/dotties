@@ -40,9 +40,6 @@ export PATH=$PATH:$GOPATH/bin
 export STACKPATH=$HOME/.local
 export PATH=$PATH:$STACKPATH/bin
 
-# Vim 
-alias vim="nvim"
-
 # Misc
 export LESS="-SRXF"
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
@@ -63,3 +60,12 @@ openemacs() {
 cbranch() {
     git rev-parse --abbrev-ref HEAD
 }
+
+json_escape() {
+    while read -r data; do
+        printf '%s' "$1" | python -c 'import json,sys; print(json.dumps(sys.stdin.read()))'
+    done
+}
+
+export YVM_DIR=/usr/local/opt/yvm
+[ -r $YVM_DIR/yvm.sh ] && . $YVM_DIR/yvm.sh
