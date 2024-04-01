@@ -17,9 +17,6 @@ plugins=(
     emacs
 )
 
-# Airflow
-alias af="airflow"
-
 # Nvm
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
@@ -36,36 +33,8 @@ if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
-# Haskell
-export STACKPATH=$HOME/.local
-export PATH=$PATH:$STACKPATH/bin
-
 # Misc
 export LESS="-SRXF"
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 alias ls="lsd"
-
-# Convenience functions
-openemacs() {
-    # this function receives a folder name that's inside of ~/emacs folder
-    # it's useful when we want to open multi emacs instances with different settings files
-
-    EMACS_USER_FOLDER="$HOME/$1/"
-    EMACS_USER_INIT_FILE="$HOME/$1/init.el"
-    EVAL_EMACS="'(setq user-emacs-directory \"$EMACS_USER_FOLDER\")'"
-    eval "open -a Emacs -n --args -q --eval=$EVAL_EMACS  -l $EMACS_USER_INIT_FILE"
-}
-
-cbranch() {
-    git rev-parse --abbrev-ref HEAD
-}
-
-json_escape() {
-    while read -r data; do
-        printf '%s' "$1" | python -c 'import json,sys; print(json.dumps(sys.stdin.read()))'
-    done
-}
-
-export YVM_DIR=/usr/local/opt/yvm
-[ -r $YVM_DIR/yvm.sh ] && . $YVM_DIR/yvm.sh
