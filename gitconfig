@@ -10,3 +10,6 @@
 [github]
 	user = shane.kennedy19@gmail.com
 
+[core]
+	pager = delta
+
